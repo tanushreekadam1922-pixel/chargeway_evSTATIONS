@@ -1,0 +1,13 @@
+{
+  "name": "chargeway",
+  "version": "1.0.0",
+  "description": "ChargeWay - EV Charging Station Finder & Navigation System",
+  "main": "server.js",
+  "engines": { "node": ">=22.5.0" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "node --watch --disable-warning=ExperimentalWarning server.js",
+    "reset-db": "node -e \"require('fs').rmSync('data/chargeway.db',{force:true});require('fs').rmSync('data/chargeway.db-wal',{force:true});require('fs').rmSync('data/chargeway.db-shm',{force:true});console.log('Database deleted. It will be re-created on next start.')\""
+  },
+  "license": "MIT"
+}
