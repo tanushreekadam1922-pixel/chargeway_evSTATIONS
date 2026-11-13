@@ -1,0 +1,15 @@
+{
+  "name": "chargeway",
+  "private": true,
+  "description": "ChargeWay - EV Charging Station Finder & Navigation System (React + Node + SQLite)",
+  "scripts": {
+    "install:client": "npm --prefix client install",
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "node-fetch": "^3.3.2"
+  }
+}
