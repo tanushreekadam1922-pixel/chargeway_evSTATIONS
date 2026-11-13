@@ -1,15 +1,13 @@
 {
   "name": "chargeway",
-  "private": true,
-  "description": "ChargeWay - EV Charging Station Finder & Navigation System (React + Node + SQLite)",
+  "version": "1.0.0",
+  "description": "ChargeWay - EV Charging Station Finder & Navigation System",
+  "main": "server.js",
+  "engines": { "node": ">=22.5.0" },
   "scripts": {
-    "install:client": "npm --prefix client install",
-    "server": "npm --prefix server start",
-    "client": "npm --prefix client run dev",
-    "build": "npm --prefix client run build"
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "node --watch --disable-warning=ExperimentalWarning server.js",
+    "reset-db": "node -e \"require('fs').rmSync('data/chargeway.db',{force:true});require('fs').rmSync('data/chargeway.db-wal',{force:true});require('fs').rmSync('data/chargeway.db-shm',{force:true});console.log('Database deleted. It will be re-created on next start.')\""
   },
-  "dependencies": {
-    "dotenv": "^18.0.10",
-    "node-fetch": "^3.3.2"
-  }
+  "license": "MIT"
 }
